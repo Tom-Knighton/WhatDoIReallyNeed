@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E2E4AB1728CCDBE00042B4CC /* WhatDoIReallyNeedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* WhatDoIReallyNeedApp.swift */; };
+		E2223EB228CCEDF0006275C6 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EB128CCEDF0006275C6 /* MainPage.swift */; };
+		E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* App.swift */; };
 		E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1828CCDBE00042B4CC /* Persistence.swift */; };
 		E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */; };
 		E2E4AB1E28CCDBE00042B4CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1D28CCDBE00042B4CC /* ContentView.swift */; };
@@ -16,14 +17,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2223EB128CCEDF0006275C6 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		E2E4AB1328CCDBE00042B4CC /* WhatDoIReallyNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDoIReallyNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2E4AB1628CCDBE00042B4CC /* WhatDoIReallyNeedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatDoIReallyNeedApp.swift; sourceTree = "<group>"; };
+		E2E4AB1628CCDBE00042B4CC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E2E4AB1828CCDBE00042B4CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E2E4AB1B28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatDoIReallyNeed.xcdatamodel; sourceTree = "<group>"; };
 		E2E4AB1D28CCDBE00042B4CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2E4AB1F28CCDBE20042B4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2E4AB2128CCDBE20042B4CC /* WhatDoIReallyNeed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatDoIReallyNeed.entitlements; sourceTree = "<group>"; };
 		E2E4AB2328CCDBE20042B4CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E2E4AB2A28CCDC840042B4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2223EB028CCEDE3006275C6 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				E2223EB128CCEDF0006275C6 /* MainPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		E2E4AB0A28CCDBE00042B4CC = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +67,13 @@
 		E2E4AB1528CCDBE00042B4CC /* WhatDoIReallyNeed */ = {
 			isa = PBXGroup;
 			children = (
-				E2E4AB1628CCDBE00042B4CC /* WhatDoIReallyNeedApp.swift */,
-				E2E4AB1828CCDBE00042B4CC /* Persistence.swift */,
+				E2223EB028CCEDE3006275C6 /* Pages */,
+				E2E4AB2B28CCDE430042B4CC /* CoreData */,
+				E2E4AB2A28CCDC840042B4CC /* Info.plist */,
+				E2E4AB1628CCDBE00042B4CC /* App.swift */,
 				E2E4AB1D28CCDBE00042B4CC /* ContentView.swift */,
 				E2E4AB1F28CCDBE20042B4CC /* Assets.xcassets */,
 				E2E4AB2128CCDBE20042B4CC /* WhatDoIReallyNeed.entitlements */,
-				E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */,
 				E2E4AB2228CCDBE20042B4CC /* Preview Content */,
 			);
 			path = WhatDoIReallyNeed;
@@ -73,6 +85,15 @@
 				E2E4AB2328CCDBE20042B4CC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E2E4AB2B28CCDE430042B4CC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */,
+				E2E4AB1828CCDBE00042B4CC /* Persistence.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2E4AB1728CCDBE00042B4CC /* WhatDoIReallyNeedApp.swift in Sources */,
+				E2223EB228CCEDF0006275C6 /* MainPage.swift in Sources */,
+				E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */,
 				E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */,
 				E2E4AB1E28CCDBE00042B4CC /* ContentView.swift in Sources */,
 				E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */,
@@ -205,6 +227,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,6 +281,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -277,6 +303,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatDoIReallyNeed/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WDIRN?";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -285,13 +313,13 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = online.tomk.WhatDoIReallyNeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -315,6 +343,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatDoIReallyNeed/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WDIRN?";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -323,13 +353,13 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = online.tomk.WhatDoIReallyNeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;

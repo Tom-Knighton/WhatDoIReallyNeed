@@ -10,6 +10,10 @@ import SwiftUI
 @main
 struct WhatDoIReallyNeedApp: App {
     let persistenceController = PersistenceController.shared
+    
+    init() {
+        UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true
+    }
 
     var body: some Scene {
         WindowGroup {
