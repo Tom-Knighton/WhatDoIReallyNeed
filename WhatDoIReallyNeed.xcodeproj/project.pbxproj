@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E2223EB228CCEDF0006275C6 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EB128CCEDF0006275C6 /* MainPage.swift */; };
 		E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */; };
+		E2223EC028CCFF82006275C6 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EBE28CCFF82006275C6 /* Home+CoreDataClass.swift */; };
+		E2223EC128CCFF82006275C6 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EBF28CCFF82006275C6 /* Home+CoreDataProperties.swift */; };
 		E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* App.swift */; };
 		E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1828CCDBE00042B4CC /* Persistence.swift */; };
 		E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		E2223EB128CCEDF0006275C6 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+WDIRN.swift"; sourceTree = "<group>"; };
+		E2223EBE28CCFF82006275C6 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E2223EBF28CCFF82006275C6 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E2E4AB1328CCDBE00042B4CC /* WhatDoIReallyNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDoIReallyNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4AB1628CCDBE00042B4CC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E2E4AB1828CCDBE00042B4CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 				E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2223EC228CCFFCD006275C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2223EBE28CCFF82006275C6 /* Home+CoreDataClass.swift */,
+				E2223EBF28CCFF82006275C6 /* Home+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E2E4AB0A28CCDBE00042B4CC = {
@@ -101,6 +114,7 @@
 		E2E4AB2B28CCDE430042B4CC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				E2223EC228CCFFCD006275C6 /* Models */,
 				E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */,
 				E2E4AB1828CCDBE00042B4CC /* Persistence.swift */,
 			);
@@ -181,8 +195,10 @@
 				E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */,
 				E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */,
 				E2E4AB1E28CCDBE00042B4CC /* ContentView.swift in Sources */,
+				E2223EC128CCFF82006275C6 /* Home+CoreDataProperties.swift in Sources */,
 				E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */,
 				E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */,
+				E2223EC028CCFF82006275C6 /* Home+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

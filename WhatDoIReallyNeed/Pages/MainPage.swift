@@ -32,23 +32,23 @@ struct HomePage: View {
                 ForEach(homes) { home in
                     VStack {
                         Circle()
-                            .fill(Color(hex: home.homeColour ?? ""))
+                            .fill(Color(hex: home.homeColour))
                             .frame(width: 50, height: 50)
                             .overlay(
-                                Text(home.homeIcon ?? "😀")
+                                Text(home.homeIcon)
                                     .font(.system(size: 25))
                             )
-                        Text(home.homeName ?? "")
+                        Text(home.homeName)
                             .font(.title3.bold())
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(
-                        Color(hex: home.homeColour ?? "#ed2d30")
+                        Color(hex: home.homeColour)
                             .overlay(Material.thin)
                     )
                     .cornerRadius(10)
-                    .shadow(color: Color(hex: home.homeColour ?? ""), radius: 1)
+                    .shadow(color: Color(hex: home.homeColour ), radius: 1)
                     .padding(.vertical, 8)
                 }
             }
