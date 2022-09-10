@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E2223EB228CCEDF0006275C6 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EB128CCEDF0006275C6 /* MainPage.swift */; };
+		E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */; };
 		E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* App.swift */; };
 		E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1828CCDBE00042B4CC /* Persistence.swift */; };
 		E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		E2223EB128CCEDF0006275C6 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+WDIRN.swift"; sourceTree = "<group>"; };
 		E2E4AB1328CCDBE00042B4CC /* WhatDoIReallyNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDoIReallyNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4AB1628CCDBE00042B4CC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E2E4AB1828CCDBE00042B4CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 			path = Pages;
 			sourceTree = "<group>";
 		};
+		E2223EB328CCF5EC006275C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E2E4AB0A28CCDBE00042B4CC = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 		E2E4AB1528CCDBE00042B4CC /* WhatDoIReallyNeed */ = {
 			isa = PBXGroup;
 			children = (
+				E2223EB328CCF5EC006275C6 /* Extensions */,
 				E2223EB028CCEDE3006275C6 /* Pages */,
 				E2E4AB2B28CCDE430042B4CC /* CoreData */,
 				E2E4AB2A28CCDC840042B4CC /* Info.plist */,
@@ -170,6 +181,7 @@
 				E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */,
 				E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */,
 				E2E4AB1E28CCDBE00042B4CC /* ContentView.swift in Sources */,
+				E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */,
 				E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -281,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -315,7 +327,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -355,7 +367,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
