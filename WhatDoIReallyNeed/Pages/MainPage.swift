@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomePage: View {
     
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Home.entity(), sortDescriptors: []) private var homes: FetchedResults<Home>
     
@@ -24,6 +25,7 @@ struct HomePage: View {
     var body: some View {
         
         VStack {
+            let layout = UIDevice.current.userInterfaceIdiom == .phone ? AnyLayout(VStackLayout()) : AnyLayout(HStackLayout())
             Text("Select Your Home:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .multilineTextAlignment(.leading)
@@ -31,10 +33,11 @@ struct HomePage: View {
             
             LazyVGrid(columns: layoutGrid) {
                 ForEach(homes) { home in
-                    VStack {
+                    layout {
                         Circle()
                             .fill(Color(hex: home.homeColour))
                             .frame(width: 50, height: 50)
+                            .shadow(radius: 1)
                             .overlay(
                                 Group {
                                     if home.homeIcon.starts(with: "SFS_") {
@@ -49,8 +52,13 @@ struct HomePage: View {
                             )
                         Text(home.homeName)
                             .font(.title3.bold())
+                            .minimumScaleFactor(0.1)
+                        
+                        if UIDevice.current.userInterfaceIdiom == .pad {
+                            Spacer()
+                        }
                     }
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 100)
                     .padding()
                     .background(
                         Color(hex: home.homeColour)
