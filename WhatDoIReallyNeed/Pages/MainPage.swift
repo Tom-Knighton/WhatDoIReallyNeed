@@ -24,55 +24,52 @@ struct HomePage: View {
     
     var body: some View {
         
-        VStack {
+        ScrollView {
             let layout = UIDevice.current.userInterfaceIdiom == .phone ? AnyLayout(VStackLayout()) : AnyLayout(HStackLayout())
             Text("Select Your Home:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .multilineTextAlignment(.leading)
                 .font(.callout.bold())
             
-            ScrollView {
-                LazyVGrid(columns: layoutGrid) {
-                    ForEach(homes) { home in
-                        layout {
-                            Circle()
-                                .fill(Color(hex: home.homeColour))
-                                .frame(width: 50, height: 50)
-                                .shadow(radius: 1)
-                                .overlay(
-                                    Group {
-                                        if home.homeIcon.starts(with: "SFS_") {
-                                            Image(systemName: home.homeIcon.replacingOccurrences(of: "SFS_", with: ""))
-                                        } else {
-                                            Text(home.homeIcon)
-                                        }
+            LazyVGrid(columns: layoutGrid) {
+                ForEach(homes) { home in
+                    layout {
+                        Circle()
+                            .fill(Color(hex: home.homeColour))
+                            .frame(width: 50, height: 50)
+                            .shadow(radius: 1)
+                            .overlay(
+                                Group {
+                                    if home.homeIcon.starts(with: "SFS_") {
+                                        Image(systemName: home.homeIcon.replacingOccurrences(of: "SFS_", with: ""))
+                                    } else {
+                                        Text(home.homeIcon)
                                     }
+                                }
                                     .font(.system(size: 25))
                                     .foregroundColor(.white)
-                                    
-                                )
-                            Text(home.homeName)
-                                .font(.title3.bold())
-                                .minimumScaleFactor(0.1)
-                            
-                            if UIDevice.current.userInterfaceIdiom == .pad {
-                                Spacer()
-                            }
+                                
+                            )
+                        Text(home.homeName)
+                            .font(.title3.bold())
+                            .minimumScaleFactor(0.1)
+                        
+                        if UIDevice.current.userInterfaceIdiom == .pad {
+                            Spacer()
                         }
-                        .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 100)
-                        .padding()
-                        .background(
-                            Color(hex: home.homeColour)
-                                .overlay(Material.thin)
-                        )
-                        .cornerRadius(10)
-                        .shadow(color: Color(hex: home.homeColour ), radius: 1)
-                        .padding(.vertical, 8)
                     }
+                    .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 100)
+                    .padding()
+                    .background(
+                        Color(hex: home.homeColour)
+                            .overlay(Material.thin)
+                    )
+                    .cornerRadius(10)
+                    .shadow(color: Color(hex: home.homeColour ), radius: 1)
+                    .padding(.vertical, 8)
                 }
             }
             
-
             Spacer()
         }
         .padding(.horizontal, 16)
