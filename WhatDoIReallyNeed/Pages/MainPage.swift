@@ -13,6 +13,7 @@ struct HomePage: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Home.entity(), sortDescriptors: []) private var homes: FetchedResults<Home>
     
+    @State private var showingCreateHomeSheet: Bool = false
     
 #if os(iOS)
     private var layoutGrid: [GridItem] = UIDevice.current.userInterfaceIdiom == .pad ? [GridItem(.flexible())] : [GridItem(.flexible()), GridItem(.flexible())]
@@ -67,8 +68,19 @@ struct HomePage: View {
             }
             Spacer()
         }
-        .navigationTitle("What Do I Really Need?")
         .padding(.horizontal, 16)
+        .navigationTitle("What Do I Really Need?")
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { self.showingCreateHomeSheet.toggle() }) {
+                    Label("New Home", systemImage: "plus.circle")
+                        .labelStyle(.titleAndIcon)
+                }
+            }
+        })
+        .sheet(isPresented: self.$showingCreateHomeSheet) {
+            CreateHomeView()
+        }
         
     }
 }
