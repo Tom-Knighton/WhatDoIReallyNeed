@@ -8,65 +8,98 @@
 import Foundation
 import SwiftUI
 import Introspect
+import CoreData
 
 struct HomePage: View {
-
+    
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) private var viewContext
-
-    var home: Home
     
     @State private var nc: UINavigationController?
-
-    @State private var titleColour: Color?
-
+    
+    @FetchRequest private var homes: FetchedResults<Home>
+    
+    init(homeId: String) {
+        self._homes = FetchRequest(entity: Home.entity(), sortDescriptors: [], predicate: NSPredicate(format: "homeId = %@", homeId))
+    }
+    
     var body: some View {
-        ScrollView {
-            VStack {
-                VStack {
+        ZStack {
+            if let home = self.homes.first {
+                ScrollView {
                     VStack {
-                        Text("See \(home.homeName)'s stock")
-                            .font(.headline.bold())
-                            .padding()
-                    }
-                    .frame(maxWidth: .infinity)
-                    .background(Color("Layer2"))
-                    .cornerRadius(10)
-                    .shadow(radius: 3)
-                    .padding(.vertical)
+                        VStack {
+                            VStack {
+                                Text("See \(home.homeName)'s stock \(home.stockItems?.count ?? 0)")
+                                    .font(.headline.bold())
+                                    .padding()
+                            }
+                            .frame(maxWidth: .infinity)
+                            .background(Color("Layer2"))
+                            .cornerRadius(10)
+                            .shadow(radius: 3)
+                            .padding(.vertical)
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: { }) {
+                            Text("I've used something")
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 8)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(Color(hex: home.homeColour).gradient)
+                        Button(action: { self.addToHome() }) {
+                            Text("Start a new list")
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 8)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        }
+                    .padding(.horizontal, 16)
                 }
-
-                Spacer()
-
-                Button(action: { self.titleColour = nil }) {
-                    Text("I've used something")
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 8)
+                .navigationTitle(home.homeName)
+                .introspectNavigationController { nc in
+                    self.nc = nc
+                    nc.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
+                    nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
+                    
+                    
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(Color(hex: home.homeColour).gradient)
-                Button(action: { self.titleColour = nil }) {
-                    Text("Start a new list")
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 8)
+                .onAppear {
+                    nc?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
+                    nc?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
                 }
-                .buttonStyle(.borderedProminent)
+                .onDisappear {
+                    nc?.navigationBar.largeTitleTextAttributes = nil
+                    nc?.navigationBar.titleTextAttributes = nil
+                }
             }
-            .padding(.horizontal, 16)
         }
-        .navigationTitle(home.homeName)
-        .introspectNavigationController { nc in
-            self.nc = nc
-            nc.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
-            nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
-
+    }
+    
+    func testDelete(_ home: Home) {
+        do {
+            viewContext.delete(home)
+            try viewContext.save()
+        } catch {
+            print("")
+            
         }
-        .onAppear {
-            nc?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
-            nc?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(Color(hex: home.homeColour))]
-        }
-        .onDisappear {
-            nc?.navigationBar.largeTitleTextAttributes = nil
-            nc?.navigationBar.titleTextAttributes = nil
+    }
+    
+    func addToHome() {
+        do {
+            let stockItem = StockItem(context: viewContext)
+            stockItem.autoAddWhenLow = false
+            stockItem.itemAmount = 1
+            stockItem.itemName = "Cheese"
+            
+            self.homes.first?.addToStockItems(stockItem)
+            try viewContext.save()
+        } catch {
+            fatalError("Uh oh")
         }
     }
 }

@@ -29,8 +29,8 @@ struct ContentView: View {
                     MainPage(selectedHome: $selectedHome)
                 } detail : {
                     ZStack {
-                        if let home = self.selectedHome {
-                            HomePage(home: home)
+                        if let id = self.selectedHome?.homeId {
+                            HomePage(homeId: id)
                         } else {
                             EmptyView()
                         }
@@ -41,7 +41,7 @@ struct ContentView: View {
                     MainPage(selectedHome: $selectedHome)
                         .navigationTitle("Homes")
                         .navigationDestination(for: Home.self) { home in
-                            HomePage(home: home)
+                            HomePage(homeId: home.homeId)
                                 .onDisappear {
                                     self.selectedHome = nil
                                 }

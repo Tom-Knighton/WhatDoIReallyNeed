@@ -152,6 +152,7 @@ struct CreateHomeView: View {
         home.homeIcon = icon
         home.homeName = name
         home.homeColour = colour
+        home.homeId = UUID().uuidString
                 
         do {
             try viewContext.save()

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E2223EB228CCEDF0006275C6 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EB128CCEDF0006275C6 /* MainPage.swift */; };
 		E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */; };
-		E2223EC028CCFF82006275C6 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EBE28CCFF82006275C6 /* Home+CoreDataClass.swift */; };
-		E2223EC128CCFF82006275C6 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EBF28CCFF82006275C6 /* Home+CoreDataProperties.swift */; };
 		E2223EC528CD00E5006275C6 /* CreateHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EC428CD00E5006275C6 /* CreateHomeView.swift */; };
 		E2223EC828CD1EFE006275C6 /* BigTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EC728CD1EFE006275C6 /* BigTextField.swift */; };
 		E2223ECB28CD2617006275C6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E2223ECA28CD2617006275C6 /* Introspect */; };
@@ -19,6 +17,10 @@
 		E2223ED328CD4B1D006275C6 /* Character+WDIRN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223ED228CD4B1D006275C6 /* Character+WDIRN.swift */; };
 		E2223ED628CDDB9E006275C6 /* CreateHomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223ED528CDDB9E006275C6 /* CreateHomeError.swift */; };
 		E2223EDA28CDF34B006275C6 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223ED928CDF34B006275C6 /* HomePage.swift */; };
+		E2223EE328CE1CC7006275C6 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EDF28CE1CC7006275C6 /* Home+CoreDataClass.swift */; };
+		E2223EE428CE1CC7006275C6 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE028CE1CC7006275C6 /* Home+CoreDataProperties.swift */; };
+		E2223EE728CE1EE1006275C6 /* StockItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE528CE1EE1006275C6 /* StockItem+CoreDataClass.swift */; };
+		E2223EE828CE1EE1006275C6 /* StockItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE628CE1EE1006275C6 /* StockItem+CoreDataProperties.swift */; };
 		E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* App.swift */; };
 		E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1828CCDBE00042B4CC /* Persistence.swift */; };
 		E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */; };
@@ -30,8 +32,6 @@
 /* Begin PBXFileReference section */
 		E2223EB128CCEDF0006275C6 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		E2223EB428CCF5F6006275C6 /* Color+WDIRN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+WDIRN.swift"; sourceTree = "<group>"; };
-		E2223EBE28CCFF82006275C6 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E2223EBF28CCFF82006275C6 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E2223EC428CD00E5006275C6 /* CreateHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHomeView.swift; sourceTree = "<group>"; };
 		E2223EC728CD1EFE006275C6 /* BigTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTextField.swift; sourceTree = "<group>"; };
 		E2223ECE28CD41CB006275C6 /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
@@ -39,6 +39,10 @@
 		E2223ED228CD4B1D006275C6 /* Character+WDIRN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+WDIRN.swift"; sourceTree = "<group>"; };
 		E2223ED528CDDB9E006275C6 /* CreateHomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHomeError.swift; sourceTree = "<group>"; };
 		E2223ED928CDF34B006275C6 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		E2223EDF28CE1CC7006275C6 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Home+CoreDataClass.swift"; path = "../../../Home+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E2223EE028CE1CC7006275C6 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Home+CoreDataProperties.swift"; path = "../../../Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2223EE528CE1EE1006275C6 /* StockItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E2223EE628CE1EE1006275C6 /* StockItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E2E4AB1328CCDBE00042B4CC /* WhatDoIReallyNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDoIReallyNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4AB1628CCDBE00042B4CC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E2E4AB1828CCDBE00042B4CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -83,8 +87,10 @@
 		E2223EC228CCFFCD006275C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E2223EBE28CCFF82006275C6 /* Home+CoreDataClass.swift */,
-				E2223EBF28CCFF82006275C6 /* Home+CoreDataProperties.swift */,
+				E2223EE528CE1EE1006275C6 /* StockItem+CoreDataClass.swift */,
+				E2223EE628CE1EE1006275C6 /* StockItem+CoreDataProperties.swift */,
+				E2223EDF28CE1CC7006275C6 /* Home+CoreDataClass.swift */,
+				E2223EE028CE1CC7006275C6 /* Home+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,14 +257,16 @@
 				E2223ED128CD48D2006275C6 /* EmojiTextField.swift in Sources */,
 				E2E4AB1E28CCDBE00042B4CC /* ContentView.swift in Sources */,
 				E2223ECF28CD41CB006275C6 /* IconPickerView.swift in Sources */,
-				E2223EC128CCFF82006275C6 /* Home+CoreDataProperties.swift in Sources */,
 				E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */,
 				E2223EC528CD00E5006275C6 /* CreateHomeView.swift in Sources */,
+				E2223EE828CE1EE1006275C6 /* StockItem+CoreDataProperties.swift in Sources */,
 				E2223EDA28CDF34B006275C6 /* HomePage.swift in Sources */,
+				E2223EE428CE1CC7006275C6 /* Home+CoreDataProperties.swift in Sources */,
 				E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */,
 				E2223ED628CDDB9E006275C6 /* CreateHomeError.swift in Sources */,
 				E2223ED328CD4B1D006275C6 /* Character+WDIRN.swift in Sources */,
-				E2223EC028CCFF82006275C6 /* Home+CoreDataClass.swift in Sources */,
+				E2223EE328CE1CC7006275C6 /* Home+CoreDataClass.swift in Sources */,
+				E2223EE728CE1EE1006275C6 /* StockItem+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
