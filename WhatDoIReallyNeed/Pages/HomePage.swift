@@ -53,6 +53,7 @@ struct HomePage: View {
         }
         .onDisappear {
             nc?.navigationBar.largeTitleTextAttributes = nil
+            nc?.navigationBar.titleTextAttributes = nil
         }
     }
 }
