@@ -69,19 +69,7 @@ struct HomePage: View {
                     .padding(.vertical, 8)
                 }
             }
-            Button(action: {
-                let home = Home(context: viewContext)
-                home.homeName = "Random test \(Int.random(in: 0...100))"
-                home.homeColour = "#313131"
-                
-                do {
-                    try viewContext.save()
-                } catch {
-                    fatalError("oops")
-                }
-            }) {
-                Text("Add test")
-            }
+
             Spacer()
         }
         .padding(.horizontal, 16)
