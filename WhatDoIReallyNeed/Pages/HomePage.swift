@@ -23,22 +23,35 @@ struct HomePage: View {
         ScrollView {
             VStack {
                 VStack {
-                    Text("See \(home.homeName)'s stock")
-                        .font(.headline.bold())
-                        .padding()
+                    VStack {
+                        Text("See \(home.homeName)'s stock")
+                            .font(.headline.bold())
+                            .padding()
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background(Color("Layer2"))
+                    .cornerRadius(10)
+                    .shadow(radius: 3)
+                    .padding(.vertical)
                 }
-                .frame(maxWidth: .infinity)
-                .background(Color("Layer2"))
-                .cornerRadius(10)
-                .shadow(radius: 3)
-                .padding()
-            }
 
-            Spacer()
+                Spacer()
 
-            Button(action: { self.titleColour = nil }) {
-                Text("me")
+                Button(action: { self.titleColour = nil }) {
+                    Text("I've used something")
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 8)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color(hex: home.homeColour).gradient)
+                Button(action: { self.titleColour = nil }) {
+                    Text("Start a new list")
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 8)
+                }
+                .buttonStyle(.borderedProminent)
             }
+            .padding(.horizontal, 16)
         }
         .navigationTitle(home.homeName)
         .introspectNavigationController { nc in
