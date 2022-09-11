@@ -36,8 +36,16 @@ struct HomePage: View {
                             .fill(Color(hex: home.homeColour))
                             .frame(width: 50, height: 50)
                             .overlay(
-                                Text(home.homeIcon)
-                                    .font(.system(size: 25))
+                                Group {
+                                    if home.homeIcon.starts(with: "SFS_") {
+                                        Image(systemName: home.homeIcon.replacingOccurrences(of: "SFS_", with: ""))
+                                    } else {
+                                        Text(home.homeIcon)
+                                    }
+                                }
+                                .font(.system(size: 25))
+                                .foregroundColor(.white)
+                                
                             )
                         Text(home.homeName)
                             .font(.title3.bold())
