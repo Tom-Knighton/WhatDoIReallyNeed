@@ -39,11 +39,12 @@ struct ContentView: View {
             } else {
                 NavigationStack(path: $path) {
                     MainPage(selectedHome: $selectedHome)
+                        .navigationTitle("Homes")
                         .navigationDestination(for: Home.self) { home in
-                            HomePage(home: home )
-                        }
-                        .onAppear {
-                            self.selectedHome = nil
+                            HomePage(home: home)
+                                .onDisappear {
+                                    self.selectedHome = nil
+                                }
                         }
                 }
             }

@@ -81,7 +81,7 @@ struct MainPage: View {
             Spacer()
         }
         .padding(.horizontal, 16)
-        .navigationTitle("What Do I Really Need?")
+        .navigationTitle("Homes")
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { self.showingCreateHomeSheet.toggle() }) {
@@ -95,6 +95,11 @@ struct MainPage: View {
         }
         .introspectNavigationController { nc in
             nc.navigationBar.largeTitleTextAttributes = nil
+        }
+        .onAppear {
+            if let first = self.homes.first {
+                self.selectedHome = first
+            }
         }
     }
 }
