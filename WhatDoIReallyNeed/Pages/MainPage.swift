@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Introspect
 
 struct MainPage: View {
     
@@ -92,6 +93,8 @@ struct MainPage: View {
         .sheet(isPresented: self.$showingCreateHomeSheet) {
             CreateHomeView()
         }
-        
+        .introspectNavigationController { nc in
+            nc.navigationBar.largeTitleTextAttributes = nil
+        }
     }
 }

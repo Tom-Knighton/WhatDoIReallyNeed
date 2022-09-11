@@ -42,12 +42,15 @@ struct ContentView: View {
                         .navigationDestination(for: Home.self) { home in
                             HomePage(home: home )
                         }
+                        .onAppear {
+                            self.selectedHome = nil
+                        }
                 }
             }
         }
         .onChange(of: self.selectedHome) { newValue in
+            self.path.removeLast(self.path.count)
             if let newValue {
-                self.path.removeLast(self.path.count)
                 self.path.append(newValue)
             }
         }
