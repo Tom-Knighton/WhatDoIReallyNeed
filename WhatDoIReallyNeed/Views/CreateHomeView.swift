@@ -61,8 +61,8 @@ struct CreateHomeView: View {
                     }
                     
                     Spacer().frame(height: 16)
-                    TextField("Choose a name for your Home", text: self.$homeName)
-                        .textFieldStyle(BigTextFieldStyle())
+                    
+                    BigTextField(text: self.$homeName, prompt: "Choose a name for your Home", maxCharacters: 30)
                         .textInputAutocapitalization(.words)
                     
                     Spacer().frame(height: 16)
