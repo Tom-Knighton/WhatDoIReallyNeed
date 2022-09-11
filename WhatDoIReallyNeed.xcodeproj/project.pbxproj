@@ -21,6 +21,7 @@
 		E2223EE428CE1CC7006275C6 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE028CE1CC7006275C6 /* Home+CoreDataProperties.swift */; };
 		E2223EE728CE1EE1006275C6 /* StockItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE528CE1EE1006275C6 /* StockItem+CoreDataClass.swift */; };
 		E2223EE828CE1EE1006275C6 /* StockItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE628CE1EE1006275C6 /* StockItem+CoreDataProperties.swift */; };
+		E2223EEA28CE2F15006275C6 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE928CE2F15006275C6 /* StockView.swift */; };
 		E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* App.swift */; };
 		E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1828CCDBE00042B4CC /* Persistence.swift */; };
 		E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 		E2223EE028CE1CC7006275C6 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Home+CoreDataProperties.swift"; path = "../../../Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E2223EE528CE1EE1006275C6 /* StockItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E2223EE628CE1EE1006275C6 /* StockItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2223EE928CE2F15006275C6 /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
 		E2E4AB1328CCDBE00042B4CC /* WhatDoIReallyNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDoIReallyNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4AB1628CCDBE00042B4CC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E2E4AB1828CCDBE00042B4CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				E2223EC628CD1EF6006275C6 /* Controls */,
 				E2223EC428CD00E5006275C6 /* CreateHomeView.swift */,
 				E2223ECE28CD41CB006275C6 /* IconPickerView.swift */,
+				E2223EE928CE2F15006275C6 /* StockView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				E2223ECF28CD41CB006275C6 /* IconPickerView.swift in Sources */,
 				E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */,
 				E2223EC528CD00E5006275C6 /* CreateHomeView.swift in Sources */,
+				E2223EEA28CE2F15006275C6 /* StockView.swift in Sources */,
 				E2223EE828CE1EE1006275C6 /* StockItem+CoreDataProperties.swift in Sources */,
 				E2223EDA28CDF34B006275C6 /* HomePage.swift in Sources */,
 				E2223EE428CE1CC7006275C6 /* Home+CoreDataProperties.swift in Sources */,

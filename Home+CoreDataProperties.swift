@@ -20,7 +20,7 @@ extension Home {
     @NSManaged public var homeColour: String
     @NSManaged public var homeName: String
     @NSManaged public var homeIcon: String
-    @NSManaged public var stockItems: NSSet?
+    @NSManaged public var stockItems: Set<StockItem>
 
 }
 

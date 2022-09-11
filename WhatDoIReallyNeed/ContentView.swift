@@ -20,13 +20,14 @@ struct ContentView: View {
     
     @State var selectedHome: Home?
     @State private var path: NavigationPath = NavigationPath()
+    @State private var hasInit: Bool = false
 
     var body: some View {
         
         Group {
             if self.horizontalSize == .regular {
                 NavigationSplitView {
-                    MainPage(selectedHome: $selectedHome)
+                    MainPage(selectedHome: $selectedHome, hasInit: $hasInit)
                 } detail : {
                     ZStack {
                         if let id = self.selectedHome?.homeId {
@@ -38,21 +39,20 @@ struct ContentView: View {
                 }
             } else {
                 NavigationStack(path: $path) {
-                    MainPage(selectedHome: $selectedHome)
+                    MainPage(selectedHome: $selectedHome, hasInit: $hasInit)
                         .navigationTitle("Homes")
                         .navigationDestination(for: Home.self) { home in
                             HomePage(homeId: home.homeId)
-                                .onDisappear {
-                                    self.selectedHome = nil
-                                }
                         }
                 }
             }
         }
         .onChange(of: self.selectedHome) { newValue in
             self.path.removeLast(self.path.count)
+            print("XXX: Remove all")
             if let newValue {
                 self.path.append(newValue)
+                print("XXX: Pushed path \(newValue.homeName)")
             }
         }
     }

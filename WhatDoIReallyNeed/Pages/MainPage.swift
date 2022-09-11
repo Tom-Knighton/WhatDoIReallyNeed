@@ -16,6 +16,8 @@ struct MainPage: View {
     @FetchRequest(entity: Home.entity(), sortDescriptors: []) private var homes: FetchedResults<Home>
     
     @Binding var selectedHome: Home?
+    @Binding var hasInit: Bool
+    
     @State private var showingCreateHomeSheet: Bool = false
     
 #if os(iOS)
@@ -24,8 +26,9 @@ struct MainPage: View {
     private var layoutGrid: [GridItem] = [GridItem(.flexible())]
 #endif
     
-    init(selectedHome: Binding<Home?>) {
+    init(selectedHome: Binding<Home?>, hasInit: Binding<Bool>) {
         self._selectedHome = selectedHome
+        self._hasInit = hasInit
     }
     
     var body: some View {
@@ -97,8 +100,11 @@ struct MainPage: View {
             nc.navigationBar.largeTitleTextAttributes = nil
         }
         .onAppear {
-            if let first = self.homes.first {
+            if let first = self.homes.first, !hasInit {
                 self.selectedHome = first
+                self.hasInit = true
+            } else {
+                self.selectedHome = nil
             }
         }
     }

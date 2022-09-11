@@ -28,18 +28,21 @@ struct HomePage: View {
             if let home = self.homes.first {
                 ScrollView {
                     VStack {
-                        VStack {
+                        NavigationLink(destination: StockView(home: home)) {
                             VStack {
-                                Text("See \(home.homeName)'s stock \(home.stockItems?.count ?? 0)")
-                                    .font(.headline.bold())
-                                    .padding()
+                                VStack {
+                                    Text("See \(home.homeName)'s stock \(home.stockItems.count)")
+                                        .font(.headline.bold())
+                                        .padding()
+                                }
+                                .frame(maxWidth: .infinity)
+                                .background(Color("Layer2"))
+                                .cornerRadius(10)
+                                .shadow(radius: 3)
+                                .padding(.vertical)
                             }
-                            .frame(maxWidth: .infinity)
-                            .background(Color("Layer2"))
-                            .cornerRadius(10)
-                            .shadow(radius: 3)
-                            .padding(.vertical)
                         }
+                        
                         
                         Spacer()
                         
