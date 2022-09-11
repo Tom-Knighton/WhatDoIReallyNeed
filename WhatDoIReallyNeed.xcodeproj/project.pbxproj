@@ -18,6 +18,7 @@
 		E2223ED128CD48D2006275C6 /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223ED028CD48D2006275C6 /* EmojiTextField.swift */; };
 		E2223ED328CD4B1D006275C6 /* Character+WDIRN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223ED228CD4B1D006275C6 /* Character+WDIRN.swift */; };
 		E2223ED628CDDB9E006275C6 /* CreateHomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223ED528CDDB9E006275C6 /* CreateHomeError.swift */; };
+		E2223EDA28CDF34B006275C6 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223ED928CDF34B006275C6 /* HomePage.swift */; };
 		E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* App.swift */; };
 		E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1828CCDBE00042B4CC /* Persistence.swift */; };
 		E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 		E2223ED028CD48D2006275C6 /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
 		E2223ED228CD4B1D006275C6 /* Character+WDIRN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+WDIRN.swift"; sourceTree = "<group>"; };
 		E2223ED528CDDB9E006275C6 /* CreateHomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHomeError.swift; sourceTree = "<group>"; };
+		E2223ED928CDF34B006275C6 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		E2E4AB1328CCDBE00042B4CC /* WhatDoIReallyNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDoIReallyNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4AB1628CCDBE00042B4CC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E2E4AB1828CCDBE00042B4CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				E2223EB128CCEDF0006275C6 /* MainPage.swift */,
+				E2223ED928CDF34B006275C6 /* HomePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				E2223EC128CCFF82006275C6 /* Home+CoreDataProperties.swift in Sources */,
 				E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */,
 				E2223EC528CD00E5006275C6 /* CreateHomeView.swift in Sources */,
+				E2223EDA28CDF34B006275C6 /* HomePage.swift in Sources */,
 				E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */,
 				E2223ED628CDDB9E006275C6 /* CreateHomeError.swift in Sources */,
 				E2223ED328CD4B1D006275C6 /* Character+WDIRN.swift in Sources */,

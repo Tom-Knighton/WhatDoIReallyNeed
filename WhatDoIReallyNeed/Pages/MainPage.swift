@@ -8,12 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct HomePage: View {
+struct MainPage: View {
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Home.entity(), sortDescriptors: []) private var homes: FetchedResults<Home>
     
+    @Binding var selectedHome: Home?
     @State private var showingCreateHomeSheet: Bool = false
     
 #if os(iOS)
@@ -21,6 +22,10 @@ struct HomePage: View {
 #else
     private var layoutGrid: [GridItem] = [GridItem(.flexible())]
 #endif
+    
+    init(selectedHome: Binding<Home?>) {
+        self._selectedHome = selectedHome
+    }
     
     var body: some View {
         
@@ -48,7 +53,6 @@ struct HomePage: View {
                                 }
                                     .font(.system(size: 25))
                                     .foregroundColor(.white)
-                                
                             )
                         Text(home.homeName)
                             .font(.title3.bold())
@@ -67,6 +71,9 @@ struct HomePage: View {
                     .cornerRadius(10)
                     .shadow(color: Color(hex: home.homeColour ), radius: 1)
                     .padding(.vertical, 8)
+                    .onTapGesture {
+                        self.selectedHome = home
+                    }
                 }
             }
             
