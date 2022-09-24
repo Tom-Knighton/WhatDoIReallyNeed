@@ -54,4 +54,9 @@ extension Color {
             return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
         }
     }
+    
+    static let layer1: Color = Color("Layer1")
+    static let layer2: Color = Color("Layer2")
+    static let layer3: Color = Color("Layer3")
+
 }

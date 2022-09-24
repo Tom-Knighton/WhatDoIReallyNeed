@@ -12,6 +12,7 @@ import CoreData
 
 struct HomePage: View {
     
+    @EnvironmentObject private var coordinator: Coordinator
     @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -28,10 +29,10 @@ struct HomePage: View {
             if let home = self.homes.first {
                 ScrollView {
                     VStack {
-                        NavigationLink(destination: StockView(home: home)) {
+                        NavigationLink(value: "STOCK_\(home.homeId)") {
                             VStack {
                                 VStack {
-                                    Text("See \(home.homeName)'s stock \(home.stockItems.count)")
+                                    Text("See what \(home.homeName) already has:")
                                         .font(.headline.bold())
                                         .padding()
                                 }
@@ -42,8 +43,7 @@ struct HomePage: View {
                                 .padding(.vertical)
                             }
                         }
-                        
-                        
+                                             
                         Spacer()
                         
                         Button(action: { }) {
@@ -78,8 +78,17 @@ struct HomePage: View {
                     nc?.navigationBar.largeTitleTextAttributes = nil
                     nc?.navigationBar.titleTextAttributes = nil
                 }
+                .navigationDestination(for: String.self) { value in
+                    if value.starts(with: "STOCK_") {
+                        StockView(homeId: value.replacingOccurrences(of: "STOCK_", with: ""))
+                    }
+                }
+                
             }
         }
+        .background(Color.layer1)
+        
+        
     }
     
     func testDelete(_ home: Home) {
@@ -94,13 +103,17 @@ struct HomePage: View {
     
     func addToHome() {
         do {
-            let stockItem = StockItem(context: viewContext)
-            stockItem.autoAddWhenLow = false
-            stockItem.itemAmount = 1
-            stockItem.itemName = "Cheese"
+            if let home = self.homes.first {
+                let stockItem = StockItem(context: viewContext)
+                stockItem.autoAddWhenLow = false
+                stockItem.itemAmount = 1
+                stockItem.itemName = "Cheese"
+                stockItem.homeId = home.homeId
+                
+                home.addToStockItems(stockItem)
+                try viewContext.save()
+            }
             
-            self.homes.first?.addToStockItems(stockItem)
-            try viewContext.save()
         } catch {
             fatalError("Uh oh")
         }

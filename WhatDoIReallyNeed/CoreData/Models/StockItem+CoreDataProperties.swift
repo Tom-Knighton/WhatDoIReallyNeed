@@ -17,8 +17,8 @@ extension StockItem {
     }
 
     @NSManaged public var autoAddWhenLow: Bool
-    @NSManaged public var homeId: UUID?
-    @NSManaged public var itemAmount: Int64
+    @NSManaged public var homeId: String
+    @NSManaged public var itemAmount: Int
     @NSManaged public var itemName: String
     @NSManaged public var home: Home?
 

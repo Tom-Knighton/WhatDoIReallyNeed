@@ -22,9 +22,13 @@
 		E2223EE728CE1EE1006275C6 /* StockItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE528CE1EE1006275C6 /* StockItem+CoreDataClass.swift */; };
 		E2223EE828CE1EE1006275C6 /* StockItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE628CE1EE1006275C6 /* StockItem+CoreDataProperties.swift */; };
 		E2223EEA28CE2F15006275C6 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EE928CE2F15006275C6 /* StockView.swift */; };
+		E2223EF028CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2223EEE28CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodeld */; };
+		E2223EF228CE3B6C006275C6 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EF128CE3B6C006275C6 /* NavigationLazyView.swift */; };
+		E2223EF528CE3FBE006275C6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EF428CE3FBE006275C6 /* Coordinator.swift */; };
+		E2223EF728CF262A006275C6 /* AddItemToStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2223EF628CF262A006275C6 /* AddItemToStock.swift */; };
+		E2808ABF28DF4A5F00619720 /* NewStockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2808ABE28DF4A5F00619720 /* NewStockItem.swift */; };
 		E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1628CCDBE00042B4CC /* App.swift */; };
 		E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1828CCDBE00042B4CC /* Persistence.swift */; };
-		E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */; };
 		E2E4AB1E28CCDBE00042B4CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4AB1D28CCDBE00042B4CC /* ContentView.swift */; };
 		E2E4AB2028CCDBE20042B4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E4AB1F28CCDBE20042B4CC /* Assets.xcassets */; };
 		E2E4AB2428CCDBE20042B4CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E4AB2328CCDBE20042B4CC /* Preview Assets.xcassets */; };
@@ -45,10 +49,14 @@
 		E2223EE528CE1EE1006275C6 /* StockItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E2223EE628CE1EE1006275C6 /* StockItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E2223EE928CE2F15006275C6 /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
+		E2223EEF28CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatDoIReallyNeed.xcdatamodel; sourceTree = "<group>"; };
+		E2223EF128CE3B6C006275C6 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
+		E2223EF428CE3FBE006275C6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E2223EF628CF262A006275C6 /* AddItemToStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToStock.swift; sourceTree = "<group>"; };
+		E2808ABE28DF4A5F00619720 /* NewStockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStockItem.swift; sourceTree = "<group>"; };
 		E2E4AB1328CCDBE00042B4CC /* WhatDoIReallyNeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDoIReallyNeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4AB1628CCDBE00042B4CC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E2E4AB1828CCDBE00042B4CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		E2E4AB1B28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatDoIReallyNeed.xcdatamodel; sourceTree = "<group>"; };
 		E2E4AB1D28CCDBE00042B4CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2E4AB1F28CCDBE20042B4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2E4AB2128CCDBE20042B4CC /* WhatDoIReallyNeed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatDoIReallyNeed.entitlements; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 				E2223EC428CD00E5006275C6 /* CreateHomeView.swift */,
 				E2223ECE28CD41CB006275C6 /* IconPickerView.swift */,
 				E2223EE928CE2F15006275C6 /* StockView.swift */,
+				E2223EF128CE3B6C006275C6 /* NavigationLazyView.swift */,
+				E2223EF628CF262A006275C6 /* AddItemToStock.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +135,22 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		E2223EF328CE3FB5006275C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2223EF428CE3FBE006275C6 /* Coordinator.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E2808ABD28DF4A5400619720 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2808ABE28DF4A5F00619720 /* NewStockItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E2E4AB0A28CCDBE00042B4CC = {
 			isa = PBXGroup;
 			children = (
@@ -144,11 +170,14 @@
 		E2E4AB1528CCDBE00042B4CC /* WhatDoIReallyNeed */ = {
 			isa = PBXGroup;
 			children = (
+				E2808ABD28DF4A5400619720 /* Models */,
+				E2223EF328CE3FB5006275C6 /* ViewModel */,
+				E2223EB328CCF5EC006275C6 /* Extensions */,
 				E2223ED428CDDB83006275C6 /* Errors */,
 				E2223EC328CD00DE006275C6 /* Views */,
-				E2223EB328CCF5EC006275C6 /* Extensions */,
 				E2223EB028CCEDE3006275C6 /* Pages */,
 				E2E4AB2B28CCDE430042B4CC /* CoreData */,
+				E2223EEE28CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodeld */,
 				E2E4AB2A28CCDC840042B4CC /* Info.plist */,
 				E2E4AB1628CCDBE00042B4CC /* App.swift */,
 				E2E4AB1D28CCDBE00042B4CC /* ContentView.swift */,
@@ -171,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				E2223EC228CCFFCD006275C6 /* Models */,
-				E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */,
 				E2E4AB1828CCDBE00042B4CC /* Persistence.swift */,
 			);
 			path = CoreData;
@@ -256,18 +284,22 @@
 				E2223EC828CD1EFE006275C6 /* BigTextField.swift in Sources */,
 				E2223EB228CCEDF0006275C6 /* MainPage.swift in Sources */,
 				E2E4AB1728CCDBE00042B4CC /* App.swift in Sources */,
-				E2E4AB1C28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld in Sources */,
 				E2223ED128CD48D2006275C6 /* EmojiTextField.swift in Sources */,
 				E2E4AB1E28CCDBE00042B4CC /* ContentView.swift in Sources */,
 				E2223ECF28CD41CB006275C6 /* IconPickerView.swift in Sources */,
 				E2223EB528CCF5F6006275C6 /* Color+WDIRN.swift in Sources */,
+				E2223EF728CF262A006275C6 /* AddItemToStock.swift in Sources */,
 				E2223EC528CD00E5006275C6 /* CreateHomeView.swift in Sources */,
 				E2223EEA28CE2F15006275C6 /* StockView.swift in Sources */,
 				E2223EE828CE1EE1006275C6 /* StockItem+CoreDataProperties.swift in Sources */,
 				E2223EDA28CDF34B006275C6 /* HomePage.swift in Sources */,
+				E2808ABF28DF4A5F00619720 /* NewStockItem.swift in Sources */,
 				E2223EE428CE1CC7006275C6 /* Home+CoreDataProperties.swift in Sources */,
+				E2223EF528CE3FBE006275C6 /* Coordinator.swift in Sources */,
 				E2E4AB1928CCDBE00042B4CC /* Persistence.swift in Sources */,
+				E2223EF028CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodeld in Sources */,
 				E2223ED628CDDB9E006275C6 /* CreateHomeError.swift in Sources */,
+				E2223EF228CE3B6C006275C6 /* NavigationLazyView.swift in Sources */,
 				E2223ED328CD4B1D006275C6 /* Character+WDIRN.swift in Sources */,
 				E2223EE328CE1CC7006275C6 /* Home+CoreDataClass.swift in Sources */,
 				E2223EE728CE1EE1006275C6 /* StockItem+CoreDataClass.swift in Sources */,
@@ -513,13 +545,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		E2E4AB1A28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodeld */ = {
+		E2223EEE28CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E2E4AB1B28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodel */,
+				E2223EEF28CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodel */,
 			);
-			currentVersion = E2E4AB1B28CCDBE00042B4CC /* WhatDoIReallyNeed.xcdatamodel */;
-			path = WhatDoIReallyNeed.xcdatamodeld;
+			currentVersion = E2223EEF28CE3978006275C6 /* WhatDoIReallyNeed.xcdatamodel */;
+			name = WhatDoIReallyNeed.xcdatamodeld;
+			path = CoreData/WhatDoIReallyNeed.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

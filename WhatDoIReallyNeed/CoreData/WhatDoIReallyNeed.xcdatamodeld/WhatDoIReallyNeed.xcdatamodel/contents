@@ -7,12 +7,9 @@
         <attribute name="homeName" attributeType="String" defaultValueString="My Home"/>
         <relationship name="stockItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StockItem" inverseName="home" inverseEntity="StockItem"/>
     </entity>
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-    </entity>
     <entity name="StockItem" representedClassName="StockItem" syncable="YES">
         <attribute name="autoAddWhenLow" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="homeId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="homeId" attributeType="String" defaultValueString="\"/>
         <attribute name="itemAmount" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="itemName" attributeType="String" defaultValueString="&quot;&quot;"/>
         <relationship name="home" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Home" inverseName="stockItems" inverseEntity="Home"/>
